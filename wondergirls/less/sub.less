@@ -1,0 +1,86 @@
+// discography
+section.disco {
+    > .title h2 { background-image:url("../images/title-discography.png"); }
+    .lang_btn { height:20px; margin-bottom:10px;
+        a { display:block; float:left; margin-right:4px; width:20px; height:20px; line-height:20px; font-size:8px; background:#000; text-align:center; border-radius:50%; color:#FFF; text-transform:uppercase;
+        &:hover { border:1px solid #000; width:18px; height:18px; line-height:18px; background:#FFF; color:#000; }
+        }
+    }
+    .album_thumb { display:table-cell; width:35.2%; max-width:352px; vertical-align:top;
+        img { width:100%; vertical-align:top; }
+        .album_track { padding:10px 0px;
+            h2 { font-size:14px; font-weight:bold; padding-bottom:6px; }
+            ol { list-style-position:inside;
+                li { font-size:12px; height:18px; }
+            }
+        }
+    }
+    .album_info { display:table-cell; padding-left:30px;
+        > .title { padding:0px 20px; height:62px; line-height:62px; background:#000; color:#FFF;
+            .subject { float:left; font-size:24px; font-weight:bold; text-transform:capitalize; }
+            .date { float:right; font-size:12px; }
+        }
+        .album_txt { font-size:12px; line-height:18px;
+            p { font-size:13px; padding-top:18px; }
+        }
+    }
+}
+
+// gallery
+section.gallery {
+    > .title h2 { background-image:url("../images/title-gallery.png"); }
+    .grid_list {
+        max-width:769px; margin:0px auto; overflow:hidden;
+        ul { overflow:hidden;
+            li { float:left; width:20%; /* max-width:150px; */
+                a { display:block; margin:0px 5px 5px 0px;
+                    img { width:100%; vertical-align:top; }
+                }
+            }
+        }
+    }
+}
+
+//notice
+section.notice {
+    > .title h2 { background-image:url("../images/title-noti.png"); }
+    table { width:100%; max-width:1000px; margin-bottom:5px; border-collapse:collapse;
+        thead { visibility:hidden; height:0px; font-size:0px; }
+        tbody {
+            tr {
+                td:nth-child(1) { width:7%; }
+                td:nth-child(2) { max-width:0px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-align:left; font-weight:600; padding:0px 10px; }
+                td:nth-child(3) { width:12%; }
+                th, td { border-bottom:1px solid #d4d3d3; padding:14px 0px; font-size:12px; color:#999; text-align:center; background:#FCFCFC; }
+                .bbs_view { padding:30px; border-bottom:3px solid #d4d3d3; line-height:18px; text-align:left; color:#000; background:#FFF; }
+            }
+            tr:first-child {
+                th, td { border-top:2px solid #d4d3d3; background:#F8F5F2; }
+                td:nth-child(2) a { color:#05abf6; }
+            }
+        }
+    }
+}
+
+//video
+section.video {
+    > .title h2 { background-image:url("../images/title-video.png"); }
+    .sect_content { width:100%; }
+    .movie { width:760px; height:480px; margin:0px auto;
+        iframe { width:100%; height:100%; }
+    }
+    .list {
+        li { max-width:202px; }
+    }
+}
+
+//schedule
+section.schedule {
+    > .title h2 { background-image:url("../images/title-sche.png"); }
+    .schedule_title { position:relative; height:40px; background:#f8f5f2; line-height:40px; text-align:center;
+        h3 { font-size:13px; color:#4a4a49; }
+        [class^="sche_"] { position:absolute; top:0px; display:block; width:40px; height:40px; background-repeat:no-repeat; background-position:center; }
+        .sche_prev { left:0px; background-image:url("../images/btn_paging_prev.gif"); }
+        .sche_next { right:0px; background-image:url("../images/btn_paging_next.gif"); }
+    }
+}

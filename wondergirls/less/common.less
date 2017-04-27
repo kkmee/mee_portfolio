@@ -1,0 +1,29 @@
+html, body { margin:0px; padding:0px; height:100%; font-family:"NanumGothic"; }
+ul { list-style:none; margin:0px; padding:0px; }
+ol, li, dl, dt, dd { margin:0px; padding:0px; }
+a { color:#000; text-decoration:none; }
+h1, h2, h3, h4, h5, h6, p { margin:0px; padding:0px; }
+
+section {
+    > .title { height:51px; padding:34px 0px; margin-bottom:50px; background:#F4F4F4; text-align:center; text-indent:-9999px; font-size:0px; text-transform:uppercase;
+        h2 { width:306px; height:51px; margin:0px auto; }
+    }
+    .sect_content { max-width:1000px; width:85%; margin:0px auto 100px; }
+    .list_page { height:30px; text-align:center;
+        a { display:inline-block; margin-left:4px; width:8px; height:8px; background:#666; border-radius:20px; text-indent:-9999px; line-height:0px;
+            &:first-child { margin-left:0px; }
+            &.on { background:#ccc; }
+            &:hover { background:#ccc; }
+        }
+    }
+    .list { margin:0px auto; padding:40px 0px 10px; text-align:center; font-size:0px;
+        li { display:inline-block; max-width:150px; margin-left:30px;
+            &:first-child { margin-left:0px; }
+            a { display:block; border:1px solid #ccc;
+                img { width:100%; vertical-align:top; }
+            }
+            .list_title { display:block; margin-top:6px; font-size:12px; }
+            .list_title span { display:block; height:16px; }
+        }
+    }
+}

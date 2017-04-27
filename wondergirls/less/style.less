@@ -1,0 +1,35 @@
+.body_main { position:relative; margin:0px; background-image:url(@pcBg); background-repeat:no-repeat; .bgsize(cover); background-position:center 0;
+}
+
+body {
+    header { position:relative; height:100px; padding:0px 20px; background-color:rgba(255, 255, 255, 0.5); box-shadow:0px 1px 7px rgba(0,0,0,0.4); -webkit-box-shadow:0px 1px 7px rgba(0,0,0,0.4); z-index:9999;
+        h1 { float:left;
+            a { display:block; width:104px; height:52px; padding:24px; background-image:url(@logo); background-repeat:no-repeat; background-position:center; transition:ease 0.7s; -webkit-transition:ease 0.7s; text-indent:-9999px; font-size:0px;
+            &:hover { transform:rotateY(180deg); transition:1.8s; }
+            }
+        }
+        nav { float:right;
+            .menu { display:none; position:relative; left:0px; width:200px; height:55px; background-color:@text-color; line-height:55px; text-align:center; font-size:16px; color:#FFF; }
+            li { float:left; height:100px; line-height:100px;
+                &:hover { background:rgba(255,255,255,0.6); }
+                a { display:block; padding:0px 15px; font-size:16px; color:@text-color; font-weight:bold; letter-spacing:-1.2px; transition:linear 0.1s;
+                &:hover { border-top:3px solid @text-color; color:@base-color; }
+                }
+            }
+        }
+    }
+    section {
+        .biglogo { position:absolute; left:60%; top:30%; width:320px; height:320px; background-image:url(@biglogo); .bgsize(cover); transition:1s;
+            &:hover { transform:scale(1.3); opacity:0; }
+        }
+    }
+    footer { position:fixed; bottom:0px; width:100%; height:57px; padding:0px 60px; box-sizing:border-box; background:rgba(0,0,0,0.5);
+        h2 { float:left; padding:6px 0px;
+            a { display:block; width:115px; height:45px; text-indent:-9999px; font-size:0px; background-image:url(@jyplogo); }
+        }
+        section { float:right; padding-top:14px;
+            [class^="flaticon-"] { display:block; float:left; width:30px; height:30px; line-height:30px; background:#e4e4e4; border-radius:5px; margin-right:10px; text-align:center; }
+            [class^="flaticon-"]:hover { background:#E8B81A; transition:0.4s; }
+        }
+    }
+}
