@@ -8,11 +8,18 @@ $('.bread_list li').hover(function(){
 });
 
 //커뮤니티 리스트 마우스 오버시, 레이어 출력
-$('.cmt_list li').hover(function(){
-    $(this).find('.cmt_list_over').fadeIn(300).css('display','block')
-    },function(){
-    $(this).find('.cmt_list_over').fadeOut(300).css('display','none')
-});
+
+if($(window).width() < 523) {
+    $('.over').removeClass('cmt_list_over').addClass('mobile');
+}
+else {
+    $('.over').removeClass('mobile').addClass('cmt_list_over');
+    $('.cmt_list li').hover(function(){
+        $(this).find('.cmt_list_over').fadeIn(300).css('display','block')
+        },function(){
+        $(this).find('.cmt_list_over').fadeOut(300).css('display','none')
+    });
+}
 
 //게시판 select 박스
 $('.news_sort').click(function(){
@@ -36,6 +43,16 @@ $('.news_sort').hover(function(){
 $('body').click(function(){
     $('.news_sort ul').css('display','none').parent().removeClass('on').css('border','1px solid #DEDEDE');
 })
+
+// 탭메뉴
+$('.tabMenu .btn_tabmenu').click(function(){
+    $('.layer_gnb_wrap').show();
+    $('body').css('overflow-y','hidden');
+});
+$('.btn_layerclose').click(function(){
+    $('.layer_gnb_wrap').hide();
+    $('body').css('overflow-y','auto');
+});
 
 //top 버튼
 $(".btn_top").hide(); // 탑 버튼 숨김
@@ -67,12 +84,18 @@ $(window).scroll(function(){
         sub.addClass('menufix');
         content.addClass('pt_70');
         sub_list.addClass('sub_scroll').children('.sub_menu_logo, .sub_history').css('display','block');
+
+        if($(window).width() < 820) {
+            sub_list.addClass('sub_scroll').children('.sub_menu_logo, .sub_history').css('display','none');
+        }
     }
     else {
         sub.removeClass('menufix');
         content.removeClass('pt_70');
         sub_list.removeClass('sub_scroll').children('.sub_menu_logo, .sub_history').css('display','none');
     }
+
+
 });
 
 //이메일 직접입력
@@ -89,7 +112,6 @@ $('.form_email_sel').change(function(){
         }
     });
 });
-
 //메인 슬라이드 배너
 
 
@@ -98,5 +120,32 @@ $('.form_email_sel').change(function(){
 
 
 
-
 }); //종료
+
+
+$(window).resize(function(){
+    var sct = $(document).scrollTop();
+    var sub = $('#sub_menu');
+    var sub_list = $('.sub_menu_list');
+    var content = $('#contents');
+
+    // 탭메뉴
+    if($(window).width() > 639){
+        $('.layer_gnb_wrap').hide();
+        $('body').css('overflow-y','auto');
+    }
+
+    if($(window).width() < 523) {
+        $('.over').removeClass('cmt_list_over').addClass('mobile');
+    }
+    else {
+        $('.over').removeClass('mobile').addClass('cmt_list_over');
+        $('.cmt_list li').hover(function(){
+            $(this).find('.cmt_list_over').fadeIn(300).css('display','block')
+            },function(){
+            $(this).find('.cmt_list_over').fadeOut(300).css('display','none')
+        });
+    }
+
+
+}); //resize 종료
